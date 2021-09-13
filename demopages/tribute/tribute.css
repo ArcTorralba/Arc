@@ -1,0 +1,17 @@
+body{
+    margin: 0px;
+    background-color: peachpuff;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+p{
+    text-align: justify;
+    font-size: 30px;
+    justify-content: center;
+    padding: 0px 15px;
+   
+}
