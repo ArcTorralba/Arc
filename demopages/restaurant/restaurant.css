@@ -1,0 +1,30 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.box{
+    width: 100%;
+    background-color: gray;
+    height: 80px;
+    line-height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: .5s all ease;
+}
+ul{
+    margin: 0%;
+}
+ul li{
+    float: left;
+    padding: 0px 10px;
+    list-style: none;
+}
+ul li :hover{
+    color: black;
+}
