@@ -1,76 +1,81 @@
-body{
-    margin: 0px;
-    padding: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; 
 }
-
-.main{
+body{
     width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #ec763fe5;
+    cursor: url(cursor.png), auto;
 }
-
 nav{
-    width: 100%; 
-    height: 80px;
-    line-height: 80px;
     display: flex;
-    justify-content: space-between;
-}
-.logo a{
+    justify-content: center;
     font-size: 30px;
-    color:black;
-    font-weight: bolder;
-    margin-left: 20px;
-}
-a{
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-    transition: .5s all ease;
+    background-color: rgb(253, 150, 91);
 }
 ul{
-    margin: 0px;
-    margin-right: 50px;
-}
-ul li{
-    float: left;
-    padding: 0px 10px;
+    display: inline;
     list-style: none;
 }
-ul li :hover{
-    color: pink;
+ul li{
+    display: inline-block;
+    padding: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
 }
-.header{
-    background-image: url(burgernako1.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-blend-mode: soft-light;
+ul li a :hover{
+    text-decoration: none;
+    color: black;
+    padding: 8px 25px;
+    transition: all .5s ease;
 }
 .content{
     position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translate(50%,-50%);
-    color: white;
-    text-align: center;
-    font-style: initial;
-    background: rgba(0, 0, 0, 0, .5);
+    top: 27vh;
+    left: 15%;
+    width: 33%;
 }
 .content h1{
     font-size: 60px;
 }
-button{
-    background: none;
-    border: 1px solid white;
-    color: white;
-    font-size: 20px;
-    padding: 8px 20px;
-    font-weight: bold;
-    border-radius: 6px;
-    transition: .5s all ease;
+hr{
+    margin-top: 30px;
+    width: 400px;
 }
-button:hover{
-    background: pink;
-    color: white;
+.content p{
+    margin-top: 30px;
+    font-size: 20px;
+}
+button{
+    margin-top: 20px;
+    background: #dfa167;
+    border: none;
+    outline: none;
+    letter-spacing: .04em;
+    font-size: 20px;
+    padding: 15px 20px; 
+}
+img{
+    position: absolute;
+    bottom: 60;
+    right: 0%;
+    width: 43%;
+    animation: animate 1s ease-in-out;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: scale(.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
