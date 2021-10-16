@@ -1,81 +1,442 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif; 
-}
 body{
+    font-family: 'Lato', sans-serif;
+}
+.cover{
+    position: relative;
+    z-index: 0;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background: #ec763fe5;
-    cursor: url(cursor.png), auto;
+    background: #e79702;
 }
-nav{
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    background-color: rgb(253, 150, 91);
+.phone{
+    z-index: 1;
+    font-weight: 200;
 }
-ul{
-    display: inline;
-    list-style: none;
+.phone i{
+    color: #000;
 }
-ul li{
-    display: inline-block;
-    padding: 30px;
-    cursor: pointer;
-    font-size: 20px;
+.phone a{
+    color:#000;
+    font-size: 13px;
     font-weight: bold;
 }
-ul li a :hover{
+.reg{
+    width: 50%;
+    text-align:right;
+}
+.reg a{
+    color:#000;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+}
+.social-icon{
+    display: inline-block;
+    width: 50%;
+    
+}
+.social-icon p{
+    display:block;
+    width: 100%;
+
+}
+.social-icon p a{
+    height: 30px;
+    margin-right: 10px;
+}
+.social-icon p a i{
+    font-size: 13px;
+    color: #000;
+}
+.social-icon p a:hover{
+    background: #f8aa02;
+    border-color: #f8aa02;
+}
+.social-icon p a:hover i{ 
+    color:#fff;
+}
+/*==========Navbar=============*/
+.bg-color{
+    background: #0f0f0ffb;
+}
+.navbar-brand{
+    color:#f8aa02;
+    font-weight: bold;
+    font-size: 35px!important;
+}
+.nav-link{
+    font-weight: bold;
+    color: #f8aa02;
+    font-size: 20px;
+}
+.btn-group{
+    color: #f8aa02;
+}
+.navbar-toggler i{
+    color: #f8aa02;
+}
+/*========End of Navbar===========*/
+/*==========Hero Section===========*/
+#hero{
+    display:table;
+    width: 100%;
+    height: 60vh;
+    background: url(aj\'s\ food.png) top center;
+    background-size: cover;
+}
+@media (min-width: 1024px){
+    #hero{
+        background-attachment: fixed;
+    }
+}
+
+#hero .hero-logo{
+    margin: 20px;
+    max-width: 100%;
+}
+#hero .hero-container{
+    background: rgba(0,0,0,0.2);
+    display: table-cell;
+    margin: 0;
+    padding:0;
+    text-align: center;
+    vertical-align: middle;
+}
+#hero h1{
+    margin: 30px 0 10px 0;
+    font-weight: bold;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #fff;
+}
+@media (max-width: 768px){
+    #hero h1{
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+#hero h2{
+    color: #fff;
+    margin-bottom: 50px;
+    font-style: italic;
+}
+@media (max-width: 768px){
+    #hero h2{
+        font-size: 24px;
+        line-height: 26px;
+        margin-bottom: 30px;
+    }
+    
+}
+#hero .actions a{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 2px;
+    transition: 0.5s;
+    margin: 10px;
+}
+#hero .btn-get-started{
+    background: #ebe703;
+    border: 2px solid #a85303;
+    color: #fff;
+}
+#hero .btn-get-started:hover{
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
     text-decoration: none;
-    color: black;
-    padding: 8px 25px;
-    transition: all .5s ease;
+    font-style: italic;
 }
-.content{
+/*==========End of Hero Section===========*/
+/* Shop Topbar */
+.shop .shop-top {
+	clear: both;
+	background: #f6f7fb;
+	padding: 18px 20px 50px 20px;
+}
+.shop .shop-shorter {
+	float: left;
+}
+.shop .single-shorter {
+	display: inline-block;
+	margin-right: 10px;
+}
+.shop .single-shorter:last-child{
+	margin:0;
+}
+.shop .single-shorter label {
+	display: inline-block;
+	float: left;
+	margin: 4px 5px 0 0;
+	font-weight:500;
+}
+.shop .single-shorter option{}
+.shop .nice-select {
+	clear: initial;
+	display: inline-block;
+	margin: 0;
+	border: 1px solid #e6e6e6;
+	border-radius: 0px;
+	height: auto;
+	width: auto;
+	border-radius: 0px;
+}
+.shop .nice-select::after{
+	border-color:#888;
+}
+.shop .nice-select .list {
+	border-radius:0px;
+}
+.shop .nice-select .option.selected {
+	font-weight: 500;
+}
+.shop .nice-select .list li{
+	color:#666;
+	border-radius:0px;
+}
+.shop .nice-select .list li:hover{
+	background:#F7941D;
+	color:#fff;
+}
+.shop .view-mode {
+	float: right;
+}
+.shop .view-mode li {
+	display: inline-block;
+	margin-right: 5px;
+}
+.shop .view-mode li:last-child{
+	margin:0;
+}
+.shop .view-mode li a {
+	width: 43px;
+	height: 32px;
+	background: transparent;
+	border: 1px solid #77777775;
+	text-align: center;
+	display: block;
+	line-height: 32px;
+	color: #888;
+	border-radius: 0px;
+}
+.shop .view-mode li.active a,
+.shop .view-mode li:hover a {
+	background: #F7941D;
+	color:#fff;
+	border-color:transparent;
+}
+/*========== Variety Section===========*/
+.variety{
+    padding-bottom: 40px;
+}
+.variety .card{
+    border: 0;
+    padding: 0 30px;
+    margin-bottom: 60px;
+    position: relative;
+    background: transparent;
+}
+.variety .card-img{
+    width: calc(100% + 60px);
+    margin-left:-30px;
+    overflow: hidden;
+    z-index: 9;
+    border-radius: 0;
+}
+.variety .card-img img{
+    max-width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.variety .card-body{
+    z-index: 10;
+    background: #ff9b04a6;
+    border-top:4px solid #f08902;
+    padding: 30px;
+    box-shadow: 0px 2px 15px rgba(241, 159,5, 0.5 );
+    margin-top: -60px;
+    transition: 0.3s;
+}
+.variety .card-title{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.variety .card-title a{
+    color: #000;
+    transition: 0.3s;
+}
+.variety .card-text{
+    color: #000;
+}
+.variety .read-more a{
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    transition: 0.3s;
+}
+.variety .read-more a:hover{
+    color: #854101;
+}
+
+.variety .card:hover img{
+    transform: scale(1.1);
+
+}
+.variety .card:hover .card-body{
+    border-color: #fdc134;
+}
+.variety .card:hover  .card-body .card-title a{
+    color: #854101;
+}
+/*==========End of Variety Section===========*/
+
+/*========== Team  Section===========*/
+.chef h2 {
+    color: #000;
+  }
+  
+  .chef .col-sm-3 {
+    padding: 0;
+  }
+  
+  .chef .card > a {
+    display: block;
+  }
+  
+  .chef .card img {
+    width: 100%;
+  }
+  
+  .chef .card h4 {
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .chef .card p {
+    font-size: 11px;
+    color: #fff;
+    opacity: .75;
+    margin: 0;
+    padding: 0 35px;
+  }
+  
+  .chef .card .social-nav {
+    margin-bottom: 45px;
+  }
+  
+  .chef .card .social-nav a {
+    color: #fff;
+    font-size: 16px;
+    margin: 0 4px;
+  }
+  
+  .chef .card .social-nav a:hover {
+    opacity: .75;
+  }
+  
+  .chef .card:hover .chef-over {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .chef .card:hover .card-title-wrap {
+    background-color: #fe9801;
+  }
+  
+  .chef .card:hover .card-title-wrap .card-title,
+  .chef .card:hover .card-title-wrap .card-text {
+    color: #fff;
+  }
+  
+  .chef .chef-over {
+    padding-top: 45px;
     position: absolute;
-    top: 27vh;
-    left: 15%;
-    width: 33%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .chef .card-title-wrap {
+    padding: 15px 25px;
+    position: relative;
+    z-index: 9;
+    background-color: #fff;
+  }
+  
+  .chef .card-title-wrap .card-title,
+  .chef .card-title-wrap .card-text {
+      display: block;
+    margin: 0;
+  }
+  
+  .chef .card-title-wrap .card-title {
+    font-size: 24px;
+    color: #000;
+  }
+  
+  .chef .card-title-wrap .card-text {
+    font-size: 18px;
+    color: #000;
+  }
+/*==========End of  Team  Section===========*/
+/*==========Subscription Section===========*/
+#subscribe{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url(./images/subscribe.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
 }
-.content h1{
-    font-size: 60px;
+#subscribe h4{
+    font-size: 25px;
+    font-weight: bold;
 }
-hr{
-    margin-top: 30px;
-    width: 400px;
-}
-.content p{
-    margin-top: 30px;
+#subscribe .from-control{
+    background: transparent;
     font-size: 20px;
 }
-button{
-    margin-top: 20px;
-    background: #dfa167;
-    border: none;
-    outline: none;
-    letter-spacing: .04em;
+#subscribe .form-btn{
     font-size: 20px;
-    padding: 15px 20px; 
+    background: #e79702;
+    border: 3px solid #fe9801;
 }
-img{
-    position: absolute;
-    bottom: 60;
-    right: 0%;
-    width: 43%;
-    animation: animate 1s ease-in-out;
+/*==========End of  Subscription Section===========*/
+
+/*=======Booking==========*/
+.make-reservation{
+  width: 100%;
+  background: rgba(231,151,2,0.5);
 }
-@keyframes animate{
-    0%{
-        opacity: 0;
-        transform: scale(.5);
-    }
-    100%{
-        opacity: 1;
-        transform: scale(1);
-    }
+.make-reservation .form-group label{
+  font-weight: bold;
+  color: #000;
+}
+@media (max-width: 768px){
+  .make-reservation .form-group .select-wrap{
+    position: relative;
+  }
+}
+@media(max-width:768px){
+  .make-reservation .form-group .btn-book{
+    width: 100%;
+    display: block;
+  }
+}
+.btn-book{
+  display: inline-block;
+  vertical-align: middle;
+  color:#fff!important;
+  background: #000!important;
 }
